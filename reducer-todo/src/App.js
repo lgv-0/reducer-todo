@@ -11,7 +11,7 @@ function App()
       {
         baseState.map((i, index)=>
           {
-            return <div key={i.id} onClick={(e)=>{baseCall({type:"toggleCompleted", id:index})}}>{i.id} : {i.item}<br /></div>;
+            return <div key={i.id} onClick={(e)=>{baseCall({type:"toggleCompleted", index:index})}}>{i.id} : {i.item}<br /></div>;
           })
       }
 
