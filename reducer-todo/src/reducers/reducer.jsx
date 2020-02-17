@@ -36,6 +36,7 @@ export const baseReducer = (state, action) =>
             }
         default:
             console.log("Error");
+            break;
     }
 
     return ("Error");
