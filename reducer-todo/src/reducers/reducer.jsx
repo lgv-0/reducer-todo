@@ -9,10 +9,20 @@ export const reducerState =
 
 export const baseReducer = (state, action) =>
 {
-    return (
-        {
-            ...state,
-            item: "test"
-        }
-    );
+    switch (action.type)
+    {
+        case "addItem":
+            {
+                return (
+                    [
+                        ...state,
+                        {item: action.title, completed: false, id: state[state.length - 1].id + 1}
+                    ]
+                );
+            }
+        default:
+            console.log("Error");
+    }
+    
+    return ("Error");
 };
