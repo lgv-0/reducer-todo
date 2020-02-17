@@ -20,9 +20,23 @@ export const baseReducer = (state, action) =>
                     ]
                 );
             }
+        case "clearCompleted":
+            {
+                return (
+                    state.filter((i)=>
+                        {
+                            return !i.completed;
+                        })
+                );
+            }
+        case "toggleCompleted":
+            {
+                state[action.index].completed = !state[action.index].completed
+                return (state);
+            }
         default:
             console.log("Error");
     }
-    
+
     return ("Error");
 };
