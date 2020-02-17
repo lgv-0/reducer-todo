@@ -1,5 +1,3 @@
-import React from "react";
-
 export const reducerState =
     [
         {item: 'Learn about reducers', completed: false, id: 1},
