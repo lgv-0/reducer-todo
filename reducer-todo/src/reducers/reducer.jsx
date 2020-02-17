@@ -1,11 +1,11 @@
 import React from "react";
 
-export default reducerState =
-{
-    item: 'Learn about reducers',
-    completed: false,
-    id: 3892987589
-};
+export const reducerState =
+    [
+        {item: 'Learn about reducers', completed: false, id: 1},
+        {item: 'Learn about react-dom', completed: false, id: 2},
+        {item: 'Learn about react-router', completed: false, id: 3}
+    ];
 
 export const baseReducer = (state, action) =>
 {
